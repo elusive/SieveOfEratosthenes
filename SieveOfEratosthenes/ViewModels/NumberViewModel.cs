@@ -49,7 +49,6 @@ namespace SieveOfEratosthenes.ViewModels
         public Color DisplayColor
         {
             get { return Model.DisplayColor; }
-            set { Model.DisplayColor = value; }
         }
 
         private void ModelOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)

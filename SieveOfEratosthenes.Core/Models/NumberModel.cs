@@ -7,9 +7,9 @@ namespace SieveOfEratosthenes.Core.Models
     /// </summary>
     public class NumberModel : ModelBase
     {
-        private Color _displayColor;
-        private bool _isPrime;
-        private int _number;
+        private Color _displayColor = Colors.CadetBlue;
+        private bool _isPrime = false;
+        private int _number = 0;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NumberModel"/> class.
@@ -38,7 +38,11 @@ namespace SieveOfEratosthenes.Core.Models
         public bool IsPrime
         {
             get { return _isPrime; }
-            set { SetProperty(ref _isPrime, value); }
+            set
+            {
+                SetProperty(ref _isPrime, value);
+                OnPropertyChanged(() => DisplayColor);
+            }
         }
 
         /// <summary>
@@ -46,8 +50,25 @@ namespace SieveOfEratosthenes.Core.Models
         /// </summary>
         public Color DisplayColor
         {
-            get { return _displayColor; }
-            set { SetProperty(ref _displayColor, value); }
+            get
+            {
+                _displayColor = DetermineColor();
+                return _displayColor;
+            }
+        }
+
+        private Color DetermineColor()
+        {
+            // prime?
+            if (_isPrime) return Constants.PrimeColor;
+
+            // colored by multiple for non-primes
+            if (_number%2 == 0) return Constants.MultipleOfTwoColor;
+            if (_number%3 == 0) return Constants.MultipleOfThreeColor;
+            if (_number%5 == 0) return Constants.MultipleOfFiveColor;
+            if (_number%7 == 0) return Constants.MultipleOfSevenColor;
+
+            return Constants.DefaultColor;
         }
     }
 }

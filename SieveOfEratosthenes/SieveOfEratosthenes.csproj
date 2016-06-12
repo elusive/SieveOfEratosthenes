@@ -140,9 +140,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Design\DesignTimeClasses\DesignTimeClasses.csproj">
+      <Project>{af7456d3-2590-4b2b-a14d-c5cf4db6a8c9}</Project>
+      <Name>DesignTimeClasses</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SieveOfEratosthenes.Core\SieveOfEratosthenes.Core.csproj">
       <Project>{7614DB0B-DD81-4451-B343-9587A37C7DC1}</Project>
       <Name>SieveOfEratosthenes.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SieveOfEratosthenes.Services\SieveOfEratosthenes.Services.csproj">
+      <Project>{27FDE2C4-E952-484D-82D8-8D220F758983}</Project>
+      <Name>SieveOfEratosthenes.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
