@@ -23,6 +23,8 @@ namespace SieveOfEratosthenes
             IUnityContainer container = new UnityContainer();
 
             container.RegisterType<IPrimeNumberService, PrimeNumberService>();
+            container.RegisterType<IDispatchService, DispatchService>();
+            container.RegisterType<MainWindow>();
             container.RegisterType<MainWindowViewModel>();
 
             var window = container.Resolve<MainWindow>();

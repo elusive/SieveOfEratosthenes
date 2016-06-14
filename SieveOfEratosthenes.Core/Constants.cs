@@ -3,7 +3,7 @@
 namespace SieveOfEratosthenes.Core
 {
     /// <summary>
-    /// Class to expose constant values used throughout the application.
+    ///     Class to expose constant values used throughout the application.
     /// </summary>
     public class Constants
     {
@@ -13,5 +13,8 @@ namespace SieveOfEratosthenes.Core
         public static readonly Color MultipleOfThreeColor = Colors.DarkOrchid;
         public static readonly Color MultipleOfFiveColor = Colors.DarkGreen;
         public static readonly Color MultipleOfSevenColor = Colors.DarkOrange;
+        public static readonly Color MultipleOfElevenColor = Colors.DarkRed;
+        public static readonly Color MultipleOfThirteenColor = Colors.DarkTurquoise;
+        public static readonly Color MultipleOfSeventeenColor = Colors.DarkSalmon;
     }
 }

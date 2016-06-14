@@ -4,7 +4,7 @@ using SieveOfEratosthenes.Core.Models;
 namespace DesignTimeClasses
 {
     /// <summary>
-    /// Design time class for number view models.
+    ///     Design time class for number view models.
     /// </summary>
     public class DesignNumberViewModel
     {
