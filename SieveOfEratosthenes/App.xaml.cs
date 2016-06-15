@@ -24,6 +24,7 @@ namespace SieveOfEratosthenes
 
             container.RegisterType<IPrimeNumberService, PrimeNumberService>();
             container.RegisterType<IDispatchService, DispatchService>();
+            container.RegisterType<IColorService, ColorService>();
             container.RegisterType<MainWindow>();
             container.RegisterType<MainWindowViewModel>();
 

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Interfaces\IColorService.cs" />
     <Compile Include="Interfaces\IDispatchService.cs" />
     <Compile Include="Interfaces\IPrimeNumberService.cs" />
     <Compile Include="ModelBase.cs" />

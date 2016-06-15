@@ -52,7 +52,7 @@
         <StackPanel Grid.Row="0"
                     Width="500"
                     Orientation="Vertical">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <Image Source="{StaticResource Logo}" Style="{StaticResource LogoStyle}" />
                 <StackPanel Margin="7,14">
                     <TextBlock Style="{StaticResource DefaultHeaderText}" Text="Sieve " />
@@ -63,7 +63,9 @@
             <Button Margin="21,7,7,7"
                     HorizontalAlignment="Center"
                     Command="{Binding ProcessNumberSieveCommand}"
-                    Content="Process Number Sieve"
+                    Content=" Process Number Sieve "
+                    IsEnabled="{Binding IsNotBusy}"
+                    Padding="4"
                     Style="{StaticResource DefaultButtonText}" />
         </StackPanel>
 
@@ -80,7 +82,7 @@
                           ItemsSource="{Binding Numbers}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <UniformGrid ClipToBounds="True" Columns="{Binding ColumnCount}" />
+                        <UniformGrid ClipToBounds="True" Columns="10" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
@@ -89,7 +91,8 @@
         <StackPanel Grid.Row="2"
                     Margin="7,7,7,28"
                     HorizontalAlignment="Center"
-                    Orientation="Horizontal">
+                    Orientation="Horizontal"
+                    ToolTip="Optimization of starting with primes square eliminates need for colors beyond these.">
             <Border Margin="4">
                 <Border.Background>
                     <SolidColorBrush Color="{x:Static core:Constants.PrimeColor}" />
